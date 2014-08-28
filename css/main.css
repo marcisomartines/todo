@@ -35,3 +35,21 @@ a{
 	padding: 0;
 	list-style-type: none;
 }
+
+.items li,
+.item-add .input{
+	border:0;
+	border-bottom:1px dashed #ccc;
+	padding: 15px 0;
+}
+
+/*botão finalizar*/
+.done-buttom{
+	display: inline-block;
+	font-size: 0.8em;
+	background-color: #d9dfe1;
+	color:#363639; 
+	padding:3px  6px;
+	border:0;
+	opacity:0.4;
+}

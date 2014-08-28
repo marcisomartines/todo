@@ -12,12 +12,17 @@
 <div class="list">
 	<h1 class="header">To do.</h1>
 	<ul class="items">
-		<li><span class="item">Fazer compras</span></li>
-		<li><span class="item done">Learn php</span></li>
+		<li>
+			<span class="item">Fazer compras</span>
+			<a href="#" class="done-buttom">Feito</a>
+		</li>
+		<li>
+			<span class="item done">Learn php</span>
+		</li>
 	</ul>
 
 	<form class="item-add" action="add.php" method="post">
-		<input type="text" name="name" placehold="Digite um novo item aqui." class="input" autocomplete="off" required />
+		<input type="text" name="name" placeholder="Digite um novo item aqui." class="input" autocomplete="off" required />
 		<input type="submit" value="Adicionar" class="submit">
 	</form>
 </body>
