@@ -11,7 +11,7 @@
 <body>
 <div class="list">
 	<h1 class="header">To do.</h1>
-	<ul>
+	<ul class="items">
 		<li><span class="item">Fazer compras</span></li>
 		<li><span class="item done">Learn php</span></li>
 	</ul>

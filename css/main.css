@@ -19,4 +19,19 @@ a{
 	width: 100%;
 	max-width: 500px;
 	padding: 20px;
+	border-radius: 2px;
+	box-shadow: 3px 3px 0 rgba(0,0,0,.1);
+	box-sizing: border-box;
+}
+
+.list .header{
+	font-family: "Shadows Into Light Two", cursive;
+	margin: 0 0 10px 0;
+}
+
+/*Itens*/
+.items{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
