@@ -30,7 +30,7 @@ $items=$itemQuery->rowCount() ? $itemQuery : [];
 	<ul class="items">
 	<?php foreach($items as $item){ ?>
 		<li>
-			<span class="item<?=$item['done']?'-done' : ''?>"><?=$item['name']?></span>
+			<span class="item<?=$item['done']?' done' : ''?>"><?=$item['name']?></span>
 			<a href="#" class="done-buttom">Feito</a>
 		</li>
 	<?php } ?> 
