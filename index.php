@@ -34,7 +34,7 @@ $items=$itemQuery->rowCount() ? $itemQuery : [];
 			<?php
 			if(!$item['done']){
 			?>
-			<a href="#" class="done-buttom">Feito</a>
+			<a href="mark.php?as=done&item=<?=$item['id']?>" class="done-buttom">Feito</a>
 			<?php } ?>
 		</li>
 	<?php } ?> 
