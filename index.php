@@ -31,7 +31,11 @@ $items=$itemQuery->rowCount() ? $itemQuery : [];
 	<?php foreach($items as $item){ ?>
 		<li>
 			<span class="item<?=$item['done']?' done' : ''?>"><?=$item['name']?></span>
+			<?php
+			if(!$item['done']){
+			?>
 			<a href="#" class="done-buttom">Feito</a>
+			<?php } ?>
 		</li>
 	<?php } ?> 
 	</ul>
