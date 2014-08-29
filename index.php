@@ -1,8 +1,20 @@
 <?php
 require_once 'app/init.php';
+$itemQuery=$db->prepare("SELECT id,name,done FROM items where user= :user");
+
+$itemQuery->execute([
+	'user'=>$_SESSION['user_id']
+	]);
+
+$items=$itemQuery->rowCount() ? $itemQuery : [];
+
+//foreach($items as $item){
+//	echo $item['name'], '<br>';	
+//}
 ?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 	<meta charst="UTF-8">
 	<title>To do Lista</title>
@@ -14,15 +26,18 @@ require_once 'app/init.php';
 <body>
 <div class="list">
 	<h1 class="header">To do.</h1>
+	<?php if(!empty($items)){ ?>
 	<ul class="items">
+	<?php foreach($items as $item){ ?>
 		<li>
-			<span class="item">Fazer compras</span>
+			<span class="item<?=$item['done']?'-done' : ''?>"><?=$item['name']?></span>
 			<a href="#" class="done-buttom">Feito</a>
 		</li>
-		<li>
-			<span class="item done">Learn php</span>
-		</li>
+	<?php } ?> 
 	</ul>
+	<?php } else{ ?>
+	<P>VOCE AINDA NAO ADICIONOU NENHUM ITEM AINDA.</P>
+	<?php } ?>
 
 	<form class="item-add" action="add.php" method="post">
 		<input type="text" name="name" placeholder="Digite um novo item aqui." class="input" autocomplete="off" required />
